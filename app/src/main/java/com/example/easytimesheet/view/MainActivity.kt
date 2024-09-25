@@ -49,6 +49,41 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+    override fun onPrepareOptionsMenu(menu: Menu): Boolean {
+        val addLocationItem = menu.findItem(R.id.action_add_location)
+        val settingsItem = menu.findItem(R.id.action_settings)
+
+        // Local function to determine if "CheckIn" should be shown
+        fun shouldShowCheckIn(): Boolean {
+            // Your condition logic here
+            return true // or false based on your condition
+        }
+        fun shouldShowCheckOut(): Boolean {
+            // Your condition logic here
+            return true // or false based on your condition
+        }
+
+
+        // Example condition: Show "CheckIn" if a certain condition is met
+        if (shouldShowCheckIn()) {
+            addLocationItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM)
+        } else {
+            addLocationItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER)
+        }
+
+        // Example condition: Show "CheckOut" if another condition is met
+        if (shouldShowCheckOut()) {
+            settingsItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM)
+        } else {
+            settingsItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER)
+        }
+
+        return super.onPrepareOptionsMenu(menu)
+    }
+
+
+
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
