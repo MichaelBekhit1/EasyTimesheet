@@ -9,7 +9,8 @@
         @PrimaryKey(autoGenerate = true) val id: Int = 0,
         val name: String,
         val address: String,
-        val email: String
+        val email: String,
+        val active: Boolean
     )
 
 
