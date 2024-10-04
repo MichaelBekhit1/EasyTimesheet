@@ -1,5 +1,5 @@
 // CheckIn.kt
-package com.example.easytimesheet.models
+package com.example.easy_timesheet.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

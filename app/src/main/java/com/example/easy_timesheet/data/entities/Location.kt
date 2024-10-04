@@ -1,5 +1,5 @@
 // Location.kt
-    package com.example.easytimesheet.models
+    package com.example.easy_timesheet.data.entities
 
     import androidx.room.Entity
     import androidx.room.PrimaryKey

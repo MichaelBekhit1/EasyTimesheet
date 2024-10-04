@@ -1,9 +1,8 @@
-package com.example.easytimesheet.view
+package com.example.easy_timesheet.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -131,5 +130,19 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "No email clients installed.", Toast.LENGTH_SHORT).show()
         }
     }
+    private fun addLocation() {
+        val intent = Intent(this, AddLocationActivity::class.java)
+        startActivity(intent)
+    }
+    private fun showActiveLocations() {
+        val intent = Intent(this, ActiveLocationsActivity::class.java)
+        startActivity(intent)
+    }
+    private fun checkOutofLocation() {
+        val intent = Intent(this, CheckOutActivity::class.java)
+        startActivity(intent)
+    }
+
+
 
 }
