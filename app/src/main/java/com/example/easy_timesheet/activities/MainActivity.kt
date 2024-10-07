@@ -14,6 +14,8 @@ import android.widget.Toast
 import com.example.easytimesheet.R
 import com.example.easytimesheet.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar.*
+import com.yourpackage.ActiveLocationsActivity
+import com.yourpackage.CheckOutActivity
 
 class MainActivity : AppCompatActivity() {
 
